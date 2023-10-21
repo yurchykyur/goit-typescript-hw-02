@@ -6,7 +6,10 @@ class Component<T extends object> {
   constructor(public props: T) {}
 }
 
-class Page extends Component {
+interface PageProps {
+  title: string;
+}
+class Page extends Component<PageProps> {
   pageInfo(): void {
     console.log(this.props.title);
   }

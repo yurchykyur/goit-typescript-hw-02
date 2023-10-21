@@ -3,8 +3,8 @@
   Доповніть цю функцію, використовуючи generics, щоб вона повертала правильний тип.
 */
 
-function getPromise(): Promise<(string | number)[]> {
-  return new Promise<(string | number)[]>((resolve) => {
+function getPromise(): Promise<[string, number]> {
+  return new Promise((resolve) => {
     resolve(["Text", 50]);
   });
 }
